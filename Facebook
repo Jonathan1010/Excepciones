@@ -1,0 +1,171 @@
+# Excepcionespackage Ventana;
+
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javafx.scene.layout.Pane;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+/*import javax.swing.JScrollBar;
+import javax.swing.JSlider;*/
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
+
+public class Ejecutar extends JFrame {
+
+    public Ejecutar() {
+        JFrame frame = new JFrame("FACEBOOK"); //Crea el JFrame y dale un título
+        JTextField texto = new JTextField();
+        JLabel Label = new JLabel("Aqui va el texto");
+        JPanel panel = new JPanel();
+
+        frame.setSize(550, 700); //550 x 700px size
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //Salga de la aplicación cuando JFrame esté cerrado.
+
+        JPanel pane = new JPanel(new GridBagLayout()); //Cree un panel para alojar todo el contenido y dele un GridBagLayout
+
+        frame.setContentPane(pane);
+        //Para la incorporación de nuevos Componentes al layout, lo que hace más sencillo el manejo de los Constraints
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.weightx = 0.5 ;
+        c.weighty = 0.5;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        //gridwidth = ancho
+        //gridwidth = cuadricula
+        JLabel headerLabel = new JLabel("Correo Electronico");
+        c.gridx = 0;
+        c.gridwidth = 3;//agregar filas
+        c.gridy = 0;
+
+        pane.add(headerLabel, c);
+
+        JLabel headerLabe2 = new JLabel("Contraseña");
+        c.gridx = 1;
+        c.gridwidth = 13;//agregar filas
+        c.gridy = 0;
+
+        pane.add(headerLabe2, c);
+
+
+        JTextField texto1 = new JTextField();
+        c.gridx = 1;
+        c.gridwidth = 13;
+        c.gridy = 3;
+        
+////////////////////////
+
+
+
+        JButton buttonC = new JButton("Entrar");
+        c.gridx = 2;
+        c.gridwidth = 1;
+        c.gridy = 1;
+
+        pane.add(buttonC, c);
+
+        //posicion 0,4 texto 
+        JLabel headerLabe9 = new JLabel("Es gratis y lo sera siempre");
+        c.gridx = 0;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 4;
+
+        pane.add(headerLabe9, c);
+
+        //posicion 0,8
+        JLabel headerLabe10 = new JLabel("Fecha de nacimiento");
+        c.gridx = 0;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 8;
+
+        pane.add(headerLabe10, c);
+
+        //posicion 0,10 
+        JLabel headerLabe11 = new JLabel("Mujer");
+        c.gridx = 0;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 10;
+
+        pane.add(headerLabe11, c);
+
+        //posicion 0,11
+        //posicion 0,10 
+        JLabel headerLabe12 = new JLabel("Al hacer clicl en Registrarte, aceptas nuestras Condiciones Obten mas informacion sobre como recimpilamos, usamos y compartimos tu informacion en la Politica de datos, asi como el uso ue hacemos d las cookies y tecnologias similares en nuestra Politica de cookies, Es posible que te enviemos notificaciones por SMS que podras desactivar cuando quieras.");
+        c.gridx = 0;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 11;
+
+        pane.add(headerLabe12, c);
+
+        //Boton Registrare 
+        JButton buttonE = new JButton("Registrate");
+        c.gridx = 0;
+        c.gridwidth = 12;
+        c.gridy = 12;
+
+        pane.add(buttonE, c);
+
+        ////////////////////////////////////////////////////
+        JLabel headerLabe7 = new JLabel("REGISTRATE");
+        c.gridx = 0;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 3;
+
+        pane.add(headerLabe7, c);
+
+        JLabel headerLabe8 = new JLabel("¿Has olvidado los datos de la cuenta?");
+        c.gridx = 1;
+        c.gridwidth = 13;//agregar filas
+        c.gridy = 2;
+
+        pane.add(headerLabe8, c);
+
+        
+        
+        
+        ///////
+        JLabel headerLabe30 = new JLabel("Hombre");
+        c.gridx = 1;
+        c.gridwidth = 12;//agregar filas
+        c.gridy = 10;
+
+        pane.add(headerLabe30, c);
+        
+        
+        
+        /////////////////////////////////s
+
+        JButton buttonI = new JButton("Dia");
+        c.gridx = 0;
+        c.gridwidth = 1;
+        c.gridy = 9;
+
+        pane.add(buttonI, c);
+
+        JButton buttonL = new JButton("Mes");
+        c.gridx = 1;
+        c.gridwidth = 1;
+        c.gridy = 9;
+
+        
+        JButton buttonL1 = new JButton("Año");
+        c.gridx = 2;
+        c.gridwidth = 12;
+        c.gridy = 9;
+
+        pane.add(buttonL, c);
+        frame.setVisible(true); //Muestra la ventana
+
+    }
+
+    public static void main(String[] args) {
+        Ejecutar objeto = new Ejecutar();
+
+    }
+
+}
